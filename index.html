@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Tools Directory</title>
+
+<style>
+  /* ===== Global Styles ===== */
+  body {
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    background-color: #000;
+    color: #fff;
+  }
+
+  h1 {
+    text-align: center;
+    font-size: 2.4em;
+    color: #3aa8ff;
+    margin-top: 30px;
+    letter-spacing: 1px;
+    text-shadow: 0 0 12px #3aa8ff;
+  }
+
+  /* ===== Slide Bar ===== */
+  .slide-bar {
+    display: flex;
+    overflow-x: auto;
+    white-space: nowrap;
+    background: #0b0b0b;
+    border-bottom: 1px solid #222;
+    box-shadow: 0 0 12px rgba(58,168,255,0.2);
+    padding: 12px 0;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+  }
+
+  .category-btn {
+    color: #aaa;
+    display: inline-block;
+    margin: 0 8px;
+    padding: 10px 20px;
+    border-radius: 25px;
+    background: #111;
+    cursor: pointer;
+    transition: 0.3s;
+    font-weight: 500;
+    border: none;
+  }
+
+  .category-btn:hover {
+    background: #3aa8ff;
+    color: #000;
+    box-shadow: 0 0 10px #3aa8ff;
+  }
+
+  .active {
+    background: #3aa8ff;
+    color: #000;
+    font-weight: 600;
+    box-shadow: 0 0 15px #3aa8ff;
+  }
+
+  /* ===== Category Sections ===== */
+  .category-section {
+    display: none;
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    animation: fadeIn 0.5s ease-in-out;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .active-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    justify-content: center;
+  }
+
+  /* ===== Cards ===== */
+  .card {
+    background: linear-gradient(145deg, #101010, #0a0a0a);
+    border: 1px solid #222;
+    border-left: 4px solid #3aa8ff;
+    border-radius: 14px;
+    padding: 20px;
+    transition: 0.3s;
+    box-shadow: 0 0 10px rgba(58,168,255,0.05);
+  }
+
+  .card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 0 20px rgba(58,168,255,0.4);
+  }
+
+  .card h3 {
+    color: #3aa8ff;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+  }
+
+  .card p {
+    font-size: 0.9em;
+    color: #bbb;
+    line-height: 1.4;
+  }
+
+  .card a {
+    color: #3aa8ff;
+    text-decoration: none;
+    font-weight: 600;
+  }
+
+  .card a:hover {
+    color: #fff;
+    text-decoration: underline;
+  }
+</style>
+</head>
+<body>
+
+<h1>AI Tools Directory</h1>
+
+<!-- ===== Slidebar ===== -->
+<div class="slide-bar">
+  <button class="category-btn active" data-category="coding">Coding</button>
+  <button class="category-btn" data-category="webdev">Web Dev</button>
+  <button class="category-btn" data-category="imagegen">Image Gen</button>
+  <button class="category-btn" data-category="videogen">Video</button>
+  <button class="category-btn" data-category="audio">Audio</button>
+  <button class="category-btn" data-category="textai">Text AI</button>
+  <button class="category-btn" data-category="design">Design</button>
+  <button class="category-btn" data-category="marketing">Marketing</button>
+  <button class="category-btn" data-category="education">Education</button>
+  <button class="category-btn" data-category="research">Research</button>
+</div>
+
+<!-- ===== CATEGORY SECTIONS ===== -->
+<div id="coding" class="category-section active-section">
+  <div class="card"><h3>GitHub Copilot</h3><p>AI assistant for coding in real-time.</p><a href="#">Visit</a></div>
+  <div class="card"><h3>Tabnine</h3><p>Predictive code suggestions.</p><a href="#">Visit</a></div>
+  <div class="card"><h3>CodeWhisperer</h3><p>AWS AI for secure code writing.</p><a href="#">Visit</a></div>
+  <div class="card"><h3>Replit Ghostwriter</h3><p>Smart live coding help.</p><a href="#">Visit</a></div>
+  <div class="card"><h3>CodiumAI</h3><p>Automatic test case generator.</p><a href="#">Visit</a></div>
+</div>
+
+<div id="webdev" class="category-section">
+  <div class="card"><h3>Durable AI</h3><p>Website generator from a sentence.</p><a href="#">Visit</a></div>
+  <div class="card"><h3>Framer AI</h3><p>Professional no-code site creator.</p><a href="#">Visit</a></div>
+  <div class="card"><h3>10Web</h3><p>AI WordPress builder.</p><a href="#">Visit</a></div>
+  <div class="card"><h3>TeleportHQ</h3><p>Front-end AI code exporter.</p><a href="#">Visit</a></div>
+  <div class="card"><h3>Builder.io</h3><p>Drag & drop content builder.</p><a href="#">Visit</a></div>
+</div>
+
+<div id="imagegen" class="category-section">
+  <div class="card"><h3>Midjourney</h3><p>High-quality text-to-image AI.</p><a href="#">Visit</a></div>
+  <div class="card"><h3>DALL·E</h3><p>AI art generator by OpenAI.</p><a href="#">Visit</a></div>
+  <div class="card"><h3>Leonardo AI</h3><p>Creative art generation tool.</p><a href="#">Visit</a></div>
+  <div class="card"><h3>BlueWillow</h3><p>Community AI art creator.</p><a href="#">Visit</a></div>
+  <div class="card"><h3>RunwayML</h3><p>AI creative editing toolkit.</p><a href="#">Visit</a></div>
+</div>
+
+<div id="videogen" class="category-section">
+  <div class="card"><h3>Synthesia</h3><p>Avatar video generator.</p><a href="#">Visit</a></div>
+  <div class="card"><h3>Pictory</h3><p>Turn text into professional videos.</p><a href="#">Visit</a></div>
+  <div class="card"><h3>Runway</h3><p>Text-to-video creative suite.</p><a href="#">Visit</a></div>
+  <div class="card"><h3>Descript</h3><p>Edit videos like text documents.</p><a href="#">Visit</a></div>
+  <div class="card"><h3>Lumen5</h3><p>Social media video maker.</p><a href="#">Visit</a></div>
+</div>
+
+<div id="audio" class="category-section">
+  <div class="card"><h3>ElevenLabs</h3><p>Realistic voice generation.</p><a href="#">Visit</a></div>
+  <div class="card"><h3>Speechify</h3><p>Convert text to lifelike speech.</p><a href="#">Visit</a></div>
+  <div class="card"><h3>Murf AI</h3><p>Studio-quality voiceovers.</p><a href="#">Visit</a></div>
+  <div class="card"><h3>Podcastle</h3><p>Podcasting with AI automation.</p><a href="#">Visit</a></div>
+  <div class="card"><h3>AIVA</h3><p>AI composer for music.</p><a href="#">Visit</a></div>
+</div>
+
+<div id="textai" class="category-section">
+  <div class="card"><h3>ChatGPT</h3><p>Conversational AI assistant.</p><a href="#">Visit</a></div>
+  <div class="card"><h3>Claude</h3><p>Context-rich text understanding.</p><a href="#">Visit</a></div>
+  <div class="card"><h3>Perplexity</h3><p>AI research assistant.</p><a href="#">Visit</a></div>
+  <div class="card"><h3>Writesonic</h3><p>AI copywriting tool.</p><a href="#">Visit</a></div>
+  <div class="card"><h3>Jasper</h3><p>Storytelling and blog writing AI.</p><a href="#">Visit</a></div>
+</div>
+
+<div id="design" class="category-section">
+  <div class="card"><h3>Canva Magic</h3><p>AI-powered design suggestions.</p><a href="#">Visit</a></div>
+  <div class="card"><h3>KREA</h3><p>Concept sketching tool.</p><a href="#">Visit</a></div>
+  <div class="card"><h3>Fotor AI</h3><p>AI photo enhancement.</p><a href="#">Visit</a></div>
+  <div class="card"><h3>Looka</h3><p>AI logo and branding.</p><a href="#">Visit</a></div>
+  <div class="card"><h3>Uizard</h3><p>Turns sketches into interfaces.</p><a href="#">Visit</a></div>
+</div>
+
+<div id="marketing" class="category-section">
+  <div class="card"><h3>Copy.ai</h3><p>Social media and ad content AI.</p><a href="#">Visit</a></div>
+  <div class="card"><h3>SurferSEO</h3><p>SEO optimization for content.</p><a href="#">Visit</a></div>
+  <div class="card"><h3>Writesonic</h3><p>Marketing text creator.</p><a href="#">Visit</a></div>
+  <div class="card"><h3>AdCreative.ai</h3><p>Auto-generate ad visuals.</p><a href="#">Visit</a></div>
+  <div class="card"><h3>Anyword</h3><p>Performance-based ad copy.</p><a href="#">Visit</a></div>
+</div>
+
+<div id="education" class="category-section">
+  <div class="card"><h3>Quizlet AI</h3><p>Smart flashcards generator.</p><a href="#">Visit</a></div>
+  <div class="card"><h3>Khanmigo</h3><p>AI tutor by Khan Academy.</p><a href="#">Visit</a></div>
+  <div class="card"><h3>Socratic</h3><p>AI homework help tool.</p><a href="#">Visit</a></div>
+  <div class="card"><h3>TutorAI</h3><p>Personal learning assistant.</p><a href="#">Visit</a></div>
+  <div class="card"><h3>ChatGPT</h3><p>Educational question solver.</p><a href="#">Visit</a></div>
+</div>
+
+<div id="research" class="category-section">
+  <div class="card"><h3>Elicit</h3><p>AI academic research helper.</p><a href="#">Visit</a></div>
+  <div class="card"><h3>Scite.ai</h3><p>Validate sources & citations.</p><a href="#">Visit</a></div>
+  <div class="card"><h3>Consensus</h3><p>Summarize scientific papers.</p><a href="#">Visit</a></div>
+  <div class="card"><h3>Connected Papers</h3><p>Explore related publications.</p><a href="#">Visit</a></div>
+  <div class="card"><h3>Iris.ai</h3><p>AI literature discovery engine.</p><a href="#">Visit</a></div>
+</div>
+
+<!-- ===== JavaScript ===== -->
+<script>
+  const buttons = document.querySelectorAll(".category-btn");
+  const sections = document.querySelectorAll(".category-section");
+
+  buttons.forEach(btn => {
+    btn.addEventListener("click", () => {
+      buttons.forEach(b => b.classList.remove("active"));
+      sections.forEach(s => s.classList.remove("active-section"));
+
+      btn.classList.add("active");
+      const category = btn.getAttribute("data-category");
+      document.getElementById(category).classList.add("active-section");
+    });
+  });
+</script>
+
+</body>
+</html>
